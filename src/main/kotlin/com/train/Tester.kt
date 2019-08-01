@@ -7,17 +7,17 @@ fun main(args: Array<String>) {
     print("Please enter number of tickets: ")
     var ticket = scanner.nextInt()
     print("How many round-trip tickets: ")
-    var round_trip_tickets = scanner.nextInt()
-    val tk = Ticket(ticket,round_trip_tickets)
+    var roundTripTickets = scanner.nextInt()
+    val tk = Ticket(ticket,roundTripTickets)
 
     println("Total tickets: "+ticket);
-    println("Round-trip: "+round_trip_tickets);
+    println("Round-trip: "+roundTripTickets);
     println("Total: "+tk.total());
 
 }
 
-class Ticket(var ticket : Int,var round_trip_tickets : Int){
+class Ticket(var ticket : Int,var roundTripTickets : Int){
     fun total() : Int{
-        return ((ticket-round_trip_tickets)*1000+round_trip_tickets*2000*0.9).toInt()
+        return ((ticket-roundTripTickets)*1000+roundTripTickets*2000*0.9).toInt()
     }
 }
